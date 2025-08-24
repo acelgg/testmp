@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ACEL OFFICIAL - Audio Button</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #1a1a1a;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      cursor: pointer;
+      background-color: #4caf50;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Play Audio</h1>
+  <audio id="myAudio" src="ssstik.io_1756040771695.mp3"></audio>
+  <button onclick="toggleAudio()">▶️ Play / ⏸️ Pause</button>
+
+  <script>
+    const audio = document.getElementById('myAudio');
+
+    function toggleAudio() {
+      if(audio.paused) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    }
+  </script>
+</body>
+</html>
